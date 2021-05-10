@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: rgb(73, 72, 72);
+}
+.container {
+	height: 100px;
+	width: 250px;
+	position: relative;
+	display: flex;
+	background-color: rgb(27, 26, 26);
+	box-sizing: border-box;
+	align-self: center;
+	color: rgb(218, 211, 211);
+	margin: 10% auto;
+	border-radius: 2%;
+	opacity: 0.8;
+}
+h1 {
+	font-size: 50px;
+	margin-top: 20px;
+	display: flex;
+	background-color: #e00b0b;
+	margin: 40px 500px;
+	border-radius: 20px;
+}
+.post {
+	position: relative;
+	width: 150px;
+	height: 70px;
+	background: linear-gradient(to right, #e00b0b, #ec3508);
+	cursor: pointer;
+	margin: auto;
+	border-radius: 30px;
+}
+.claim {
+	position: relative;
+	width: 150px;
+	height: 70px;
+	background: linear-gradient(to right, #e00b0b, #ec3508);
+	cursor: pointer;
+	margin: auto;
+	border-radius: 30px;
+}
+.Note {
+	position: relative;
+}
