@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login and registration page</title>
+        <link rel="stylesheet" href="/style.css">
+        </head>
+        <body>
+            <div class="container">
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="login()" >Login</button>
+                        <button type="button" class="toggle-btn" onclick="register()" >Register</button>
+                    </div>
+                    <div class="social-icons">
+                        <img src="https://image.flaticon.com/icons/png/128/2504/2504914.png">
+                        <img src="https://image.flaticon.com/icons/png/128/2504/2504884.png">
+                        <img src="https://image.flaticon.com/icons/png/128/145/145802.png">
+                    </div>
+                    <form action="/auth/index" method = "POST" id="login" class="input-group">
+                        <div class ="form-group">
+                            <label for ="email">Email</label>
+                            <input type="email" class="input-field" placeholder="Email" required id = "email" name ="email">
+                        </div>
+
+                        <div class ="form-group">
+                            <label for ="password">Password</label>
+                            <input type="password" class="input-field" placeholder="Password" required id = "password" name ="password">
+                        </div>
+                        <input type="checkbox" class="check-box"><span>Remember password</span>
+                        <button type="Submit" class="Submit-btn">Log In </button>
+                    </form>
+
+                    <form action="/auth/index" method = "POST" id="register" class="input-group">
+                        <div class ="form-group">
+                            <label for ="name">Name</label>
+                            <input type="text" class="input-field" placeholder="Username" required id = "name" name ="name">
+                        </div>
+                        
+                        <div class ="form-group">
+                            <label for ="email">Email</label>
+                            <input type="email" class="input-field" placeholder="Email" required id ="email" name ="email">
+                        </div>
+
+                        <div class ="form-group">
+                            <label for ="password">Password</label>
+                            <input type="password" class="input-field" placeholder="Password" required id ="password" name ="password">
+                        </div>
+
+                        <div class ="form-group">
+                            <label for ="confirmPassword">Confirm Password</label>
+                            <input type="password" class="input-field" placeholder="Password" required id ="confirmPassword" name ="confirmPassword">
+                        </div>
+                        
+                        <input type="checkbox" class="check-box"><span>I agree to the terms and condition</span>
+                        <button type="Submit" class="Submit-btn" id = "registerBtn">Register User</button>
+                    </form>
+                </div>
+              {{#if message}}
+              <h4 class = "alert alert-danger mt-4">{{message}}</h4>
+              {{/if}}
+            </div>
+          <script>
+                var x=document.getElementById("login");
+                var y=document.getElementById("register");
+                var z=document.getElementById("btn");
+                function register(){
+                    x.style.left="-400px";
+                    y.style.left="50px";
+                    z.style.left="110px";
+                }
+                function login(){
+                    x.style.left="50px";
+                    y.style.left="450px";
+                    z.style.left="0px";
+                }
+
+          </script>
+          <script src = controllers\auth.js>
+        </body>
+        </html>
